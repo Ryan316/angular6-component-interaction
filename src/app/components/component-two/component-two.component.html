@@ -1,0 +1,28 @@
+<div id="component-two">
+	<div class="row">
+		<div class="container">
+			<div class="message-placeholder">
+				<div class="message-wrapper">
+					<div class="message-container">
+		                <label class="title" for="state">Send a message to: Component One</label>
+		                <div class="message-input"><input type="text" [(ngModel)]="_messageOne" placeholder="Enter Message" class="form-control message"></div>
+		                <div class="send-message"><button (click)="sendMessage('componentTwo', 'componentOne')" type="button" class="btn-message btn btn-default">Send</button></div>
+		            </div>
+		             <div class="message-container">
+		                <label class="title" for="state">Send a message to: Component Three</label>
+		                <div class="message-input"><input type="text" [(ngModel)]="_messageThree" placeholder="Enter Message" class="form-control message"></div>
+		                <div class="send-message"><button (click)="sendMessage('componentTwo', 'componentThree')" type="button" class="btn-message btn btn-default">Send</button></div>
+		            </div>
+		        </div>
+		    </div>
+			<div *ngFor="let message of _messages" class="received-messages-container col-xs-12">
+				<div class="from"><span class="messages-titles">From:</span> {{message.from}}</div>
+				<span class="messages-titles">Message:</span>
+				<div class="messages">{{message.message}}</div>
+			</div>
+			<div class="componet-three-outlet">
+				<router-outlet></router-outlet>
+			</div>
+		</div>
+	</div>
+</div>

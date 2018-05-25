@@ -1,0 +1,41 @@
+#component-three {
+	position: absolute;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    top: 0;
+    border-left: 1px solid #dbdbdb;
+    background: #FFF;
+    overflow-y: auto;
+    h3 {
+    	text-align: center;
+    	margin-right: 15px;
+    }
+    .message-input {
+    	width: 178px;
+	    float: left;
+	    margin-right: 15px;
+    }
+    .message-container {
+    	margin-bottom: 15px;
+    }
+    .btn-default {
+    	outline: 0;
+    }
+    .from { 
+    	font-size: 12px;
+    	text-transform: capitalize;
+    }
+    .messages {
+    	background-color: #337ab7;
+    	padding: 10px;
+    	color: #FFF;
+    }
+    .received-messages-container {
+    	margin-bottom: 15px;
+    	clear: left
+    }
+    .messages-titles {
+    	font-size: 12px;
+    }
+}

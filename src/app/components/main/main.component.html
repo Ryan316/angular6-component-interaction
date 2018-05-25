@@ -1,0 +1,12 @@
+<div id="main-component">
+    <div class="container">
+        <h3 [routerLink]="['main']">Component Interaction</h3>
+        <ul class="nav nav-pills">
+            <li routerLinkActive="active" [routerLink]="['component-one']"><a>Component One</a></li>
+            <li routerLinkActive="active" [routerLink]="['component-two']" ><a>Component Two</a></li>
+        </ul>
+        <div class="router-container">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
