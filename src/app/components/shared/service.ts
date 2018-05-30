@@ -11,21 +11,20 @@ export class ComponentsService {
   public componentOne$ = this.componentOne.asObservable();
   public componentTwo$ = this.componentTwo.asObservable();
   public componentThree$ = this.componentThree.asObservable();
-
-  constructor() {
-
-  }
-
   public _messages = {
     componentOne: [],
     componentTwo: [],
     componentThree: []
   }
 
-  public sendMessages(from, to, body) {
+  constructor() {
+
+  }
+
+  public sendMessages(from, to, message) {
     this._messages[to].push({
       from,
-      message: body
+      message
     });
     this[to].next(this._messages[to]);
   }
